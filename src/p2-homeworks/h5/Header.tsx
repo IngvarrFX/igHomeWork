@@ -13,7 +13,7 @@ function Header() {
                                  activeClassName={styles.active}> junior </NavLink>  </span>
                 <span>  <NavLink to={PATH.JUNIOR_PLUS} className={styles.link}
                                  activeClassName={styles.active}> junior-plus </NavLink>  </span>
-                <span className={styles.square}></span>
+                <span className={styles.circle}></span>
             </div>
         </div>
     )

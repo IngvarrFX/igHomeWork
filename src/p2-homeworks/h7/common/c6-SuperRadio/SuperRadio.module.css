@@ -1,0 +1,8 @@
+.radio{
+    background: transparent;
+    oppearance: none;
+    outline: none;
+}
+.radio:checked{
+    background: black;
+}
