@@ -1,0 +1,45 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.square{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    border: 1px solid blue;
+    position: absolute;
+    top: 5px;
+    margin-left: 5px;
+}
+.breadcrumbs{
+    justify-content: space-between;
+    transition-duration: 700ms ;
+    transform: translate(-260px);
+    transition: 0.5s;
+
+}
+.link{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.active{
+    color: gold;
+}
+.link:hover{
+    transform: scale(1.2);
+}
+
+.breadcrumbs:hover{
+    transition-duration: 700ms ;
+    transform: translate(0px);
+}

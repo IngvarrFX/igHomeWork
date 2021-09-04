@@ -1,0 +1,35 @@
+.input:focus{
+    outline: none;
+    border: black solid 1px;
+    border-radius: 20px;
+    padding: 0 7px;
+}
+
+.superInput{
+    margin: 10px;
+    background: #61dafb;
+    color: black;
+    padding: 0 7px;
+    outline: none;
+    border-radius: 20px;
+}
+
+.errorInput{
+    margin: 10px;
+    background: rgba(255,0,0,0.58);
+    color: black;
+    border: black solid 2px;
+    border-radius: 20px;
+    padding: 0 7px;
+    outline: none;
+}
+
+.error{
+    color: rgba(255,0,0,0.58);
+    height: 21px;
+    margin-left: 10px;
+}
+
+.error.spanClassName{
+
+}
