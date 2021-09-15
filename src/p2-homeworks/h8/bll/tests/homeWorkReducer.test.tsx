@@ -14,6 +14,7 @@ beforeEach(() => {
         {_id: 3, name: 'Виктор', age: 44},
         {_id: 4, name: 'Дмитрий', age: 40},
         {_id: 5, name: 'Ирина', age: 55},
+        {_id: 6, name: 'Ирина', age: 85}
     ]
 })
 
@@ -23,7 +24,7 @@ test('sort name up', () => {
     console.log(newState)
     expect(newState[0].name).toBe('Александр')
 
-    const result = [1,3,4,5, 2,0].filter((el,i) => el === newState[i]._id)
+    const result = [1,3,4,5,6, 2,0].filter((el,i) => el === newState[i]._id)
     expect(result.length).toBe(newState.length)
 
 })

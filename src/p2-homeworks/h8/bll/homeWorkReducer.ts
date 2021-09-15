@@ -3,7 +3,7 @@ import {InitialPeopleType} from "../HW8";
 
 type ActionType = {
     type: "sort" | "check"
-    payload: "up" | "down" | 18
+    payload: "up" | "down" | number
 }
 
 export const homeWorkReducer = (state: InitialPeopleType, action: ActionType): InitialPeopleType => { // need to fix any
@@ -16,7 +16,7 @@ export const homeWorkReducer = (state: InitialPeopleType, action: ActionType): I
             }else{
                return  copyState.sort((a, b) => a.name.localeCompare(b.name)).reverse()
             }
-        return state
+        return copyState
         }
         case "check": {
 

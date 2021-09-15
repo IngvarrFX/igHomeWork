@@ -2,11 +2,11 @@
     width: 250px;
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
 }
 
 
 .buttons{
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+
 }
