@@ -27,8 +27,8 @@ function HW8() {
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id} className={styles.items}>
 
-            <div>{p.name}</div>
-            <div>{p.age}</div>
+            <span>{p.name}</span>
+            {p.age}
 
         </div>
     ))
@@ -43,11 +43,14 @@ function HW8() {
             homeworks 8
 
             {/*should work (должно работать)*/}
-            {finalPeople}
+            <div className={styles.peoples}>
+                {finalPeople}
+            </div>
+
             <div className={styles.buttons}>
-                <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-                <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-                <div><SuperButton onClick={checkAge}>check 18</SuperButton></div>
+                <SuperButton onClick={sortUp}>sort up</SuperButton>
+                <SuperButton onClick={sortDown}>sort down</SuperButton>
+                <SuperButton onClick={checkAge}>check 18</SuperButton>
             </div>
 
             <hr/>
