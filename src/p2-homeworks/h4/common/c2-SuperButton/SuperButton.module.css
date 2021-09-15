@@ -18,15 +18,15 @@
 
 
 .red {
-    background: rgba(255,0,0,0.58);
+    background: rgba(255, 0, 0, 0.58);
 }
 
-.button{
+.button {
     position: relative;
     margin: 10px;
     overflow: hidden;
     cursor: pointer;
-    width: 70px;
+    width: 80px;
     border: #1ea7fd solid 1px;
     border-radius: 20px;
 
@@ -48,12 +48,12 @@
 
 }
 
-.button:hover::after{
+.button:hover::after {
     animation: blink 0.35s ease;
 }
 
 
-.button:hover::before{
+.button:hover::before {
     display: block;
     content: '';
     position: absolute;
@@ -66,23 +66,26 @@
     opacity: 0.2;
     z-index: 7;
 }
-.button:focus{
+
+.button:focus {
     border: #1ea7fd solid 1px;
     border-radius: 20px;
 }
-.button:active{
+
+.button:active {
     background: #99ff99;
 }
 
-.button:disabled{
+.button:disabled {
     color: #005500;
     cursor: auto;
 }
 
-.button:disabled:after{
+.button:disabled:after {
     z-index: -1;
 }
-.button:disabled:before{
+
+.button:disabled:before {
     z-index: -1;
 }
 
