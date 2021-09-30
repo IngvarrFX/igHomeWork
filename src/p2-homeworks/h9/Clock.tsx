@@ -1,31 +1,39 @@
-import React, {useState} from 'react'
-import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import React, {useState} from "react"
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton"
+import styles from './Clock.module.css'
+import {brotliCompress} from "zlib";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
+    const [date, setDate] = useState<Date>(new Date())
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const formatData = (num: number) => num < 10 ? "0" + num : num
+
+
+    const stringTime = formatData(date.getHours()) + ":" + formatData(date.getMinutes()) + ":" + formatData(date.getSeconds())
+    const stringDate = formatData(date.getDay()) + "." + formatData(date.getMonth()) + "." + formatData(date.getFullYear())
+
+    // const stringTime = date?.toLocaleTimeString() || <br/>
+    // const stringDate = date?.toLocaleDateString() || <br/>
 
     return (
         <div>
@@ -35,13 +43,13 @@ function Clock() {
             >
                 {stringTime}
             </div>
+            <div className={!show ? styles.hideDate : ''}>
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
+                    <div >
+                        {stringDate}
+                    </div>
 
+            </div>
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
 
