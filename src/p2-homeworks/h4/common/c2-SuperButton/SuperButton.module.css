@@ -26,9 +26,9 @@
     margin: 10px;
     overflow: hidden;
     cursor: pointer;
-    width: 80px;
     border: #1ea7fd solid 1px;
     border-radius: 20px;
+    display: inline-block;
 
 }
 
