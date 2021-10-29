@@ -1,6 +1,6 @@
 .radio{
     background: transparent;
-    oppearance: none;
+    /*oppearance: none;*/
     outline: none;
 }
 .radio:checked{

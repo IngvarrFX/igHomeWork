@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import SuperRange from "./common/c7-SuperRange/SuperRange"
-import SuperDoubleRange from "./common/c8-SuperDoubleRange/SuperDoubleRange"
 import {SuperDoubleRangeMy} from "./common/c8-SuperDoubleRange/SuperDoubleRangeMy";
+import s from './HW11.module.css'
 
 
 function HW11() {
@@ -24,7 +24,7 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <span className={s.valueLeft}>{value1}</span>
                 <SuperRange onChangeRange={(value) => setValueRange(value)}
                             num={value1}
                     // сделать так чтоб value1 изменялось
@@ -32,12 +32,12 @@ function HW11() {
             </div>
 
             <div>
-                <span>{value1}</span>
+                <span className={s.valueLeft}>{value1}</span>
                 <SuperDoubleRangeMy
                     onChangeRange={(values) => setValuesRange(values)}
                     numbers={[value1,value2]}
                 />
-                <span>{value2}</span>
+                <span className={s.valueRight}>{value2}</span>
             </div>
 
             <hr/>

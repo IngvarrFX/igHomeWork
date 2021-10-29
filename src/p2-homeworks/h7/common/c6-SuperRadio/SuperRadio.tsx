@@ -4,8 +4,8 @@ import styles from './SuperRadio.module.css'
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperRadioPropsType = DefaultRadioPropsType & {
-    options?: any[]
-    onChangeOption?: (option: any) => void
+    options?: string[]
+    onChangeOption?: (option: string) => void
 }
 
 const SuperRadio: React.FC<SuperRadioPropsType> = (
@@ -28,7 +28,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
                 type={'radio'}
                 onChange={onChangeCallback}
                 value={o}
-                /*id={o}*/
+                id={o}
                 checked={value === o}
                 name={name}
             />

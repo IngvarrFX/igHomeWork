@@ -4,6 +4,7 @@ import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "../h10/bll/store";
 import {changeThemeC} from "./bll/themeReducer";
+import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
 
 const themes = ["dark", "red", "some"];
 
@@ -26,7 +27,10 @@ function HW12() {
 
             {/*should work (должно работать)*/}
             {/*SuperSelect or SuperRadio*/}
-            <SuperSelect options={themeArray} onChangeOption={onChangeCallback}/>
+            <SuperSelect options={themeArray} value={theme} onChangeOption={onChangeCallback}/>
+            <div>
+                <SuperRadio options={themeArray} value={theme} onChangeOption={onChangeCallback}/>
+            </div>
             <hr/>
         </div>
     );
