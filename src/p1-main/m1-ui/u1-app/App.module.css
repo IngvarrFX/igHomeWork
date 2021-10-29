@@ -1,7 +1,14 @@
+
+
 body {
-    background: url("https://wallpapers777.com/wallpapers/big/background_oblaka_nebo_goluboj_1134451_pic_image_wallpaper_big_1920x1080.jpg");
+    background: url("https://4kwallpapers.com/images/walls/thumbs_3t/5585.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .App {
     margin: 10px;
+    color: white;
 }
+

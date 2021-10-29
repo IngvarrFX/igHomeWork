@@ -4,8 +4,8 @@ import styles from './SuperSelect.module.css'
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: any[]
-    onChangeOption?: (option: any) => void
+    options?: string[]
+    onChangeOption?: (option: string) => void
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = (
@@ -25,6 +25,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 
     return (
         <select className={styles.select} onChange={onChangeCallback} {...restProps}>
+            <option value="">--Please choose an option--</option>
             {mappedOptions}
         </select>
     )
